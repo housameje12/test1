@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'SupercellHeadline-Heavy';
+	src: url('../fonts/supercellheadline-heavy.eot');
+	src: url('../fonts/supercellheadline-heavy.eot#iefix') format('embedded-opentype'),
+	url('../fonts/supercellheadline-heavy.woff2') format('woff2'),
+	url('../fonts/supercellheadline-heavy.woff') format('woff');
+}    
+@font-face {
+	font-family: 'SupercellHeadline-Bold';
+	src: url('../fonts/supercellheadline-bold.eot');
+	src: url('../fonts/supercellheadline-bold.eot#iefix') format('embedded-opentype'),
+	url('../fonts/supercellheadline-bold.woff2') format('woff2'),
+	url('../fonts/supercellheadline-bold.woff') format('woff');
+}    

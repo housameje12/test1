@@ -1,0 +1,499 @@
+@import url("fonts_supercelltext_full.css");
+@import url("fonts_supercellheadline.css");
+
+/*
+ * GENERAL
+ */
+
+#onetrust-consent-sdk * {
+	font-family: SupercellText-Regular, arial, sans-serif !important;
+	font-weight: normal !important;
+}
+
+.onetrust-pc-dark-filter {
+	background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/*
+ * FOOTER
+ */
+#onetrust-consent-sdk #onetrust-group-container *, #onetrust-consent-sdk #onetrust-button-group-parent * {
+	font-size: 13px !important;
+	color: #fff;
+}
+#onetrust-consent-sdk #onetrust-button-group-parent button {
+	font-family: SupercellText-Medium, arial, sans-serif !important;
+	font-size: 13px !important;
+	color: #fff !important;
+	border-radius: 8px !important;
+	padding: 12px 14px !important;
+	opacity: 1 !important;
+	transition: background-color 0.15s cubic-bezier(0.645,0.045,0.355,1);
+	margin-right: 1.25em !important;
+}
+#onetrust-banner-sdk[dir="rtl"] #onetrust-button-group-parent button {
+	margin-right: 0 !important;
+	margin-left: 1.25em !important;
+}
+#onetrust-consent-sdk #onetrust-button-group-parent button:hover {
+	background-color: #2979de !important;
+}
+#onetrust-consent-sdk #onetrust-group-container a, #onetrust-consent-sdk button#onetrust-pc-btn-handler {
+	text-decoration: none !important;
+	color: #2d85f3 !important;
+	font-family: SupercellText-Medium, arial, sans-serif !important;
+	opacity: 1 !important;
+	background-color: transparent !important;
+	transition: color 0.15s cubic-bezier(0.645,0.045,0.355,1);
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	min-width: 0 !important;
+}
+#onetrust-consent-sdk #onetrust-group-container a:hover, #onetrust-consent-sdk button#onetrust-pc-btn-handler:hover {
+	background-color: transparent !important;
+	color: #4498ff !important;
+}
+#onetrust-consent-sdk #onetrust-group-container a {
+	white-space: nowrap !important;
+}
+#onetrust-consent-sdk button#onetrust-reject-all-handler {
+	background-color: transparent !important;
+	color: #2d85f3 !important;
+	transition: color 0.15s cubic-bezier(0.645,0.045,0.355,1);
+}
+#onetrust-consent-sdk button#onetrust-reject-all-handler:hover {
+	color: #4498ff !important;
+	background-color: transparent !important;
+}
+#onetrust-pc-sdk .ot-pc-footer {
+	border-top: none !important;
+}
+
+/*
+ * FOOTER @media
+ */
+
+@media only screen and (max-width: 425px) {
+
+	#onetrust-consent-sdk #onetrust-banner-sdk p {
+		margin-bottom: 4px !important;
+	}
+	#onetrust-banner-sdk #onetrust-policy {
+		margin-top: 20px !important;
+		margin-bottom: 0 !important;
+	}
+	#onetrust-consent-sdk #onetrust-group-container a {
+		display: block !important;
+		margin-left: 0px !important;
+	}
+	#onetrust-consent-sdk button#onetrust-pc-btn-handler {
+		padding: .25em 0 !important;
+		margin-top: 10px;
+	}
+	#onetrust-consent-sdk #onetrust-button-group-parent button:last-child {
+		margin-bottom: 22px !important;
+	}
+}
+@media only screen and (max-width: 340px) {
+	#onetrust-consent-sdk #onetrust-group-container a {
+		display: inline !important;
+		margin-left: 5px !important;
+	}
+}
+@media only screen and (min-width: 426px) and (max-width: 503px) {
+	#onetrust-consent-sdk #onetrust-banner-sdk p {
+		margin-bottom: 0px !important;
+	}
+	#onetrust-banner-sdk #onetrust-policy {
+		margin-top: 2.25em !important;
+		margin-bottom: 0 !important;
+	}
+	#onetrust-consent-sdk button#onetrust-pc-btn-handler {
+		padding: .25em 0 !important;
+		margin-top: 10px;
+	}
+}
+@media only screen and (min-width: 426px) and (max-width: 896px) {
+	#onetrust-banner-sdk .ot-sdk-container, #onetrust-pc-sdk .ot-sdk-container, #ot-sdk-cookie-policy .ot-sdk-container {
+		width: 100% !important;
+	}
+	#onetrust-banner-sdk #onetrust-policy {
+		margin-top: 22px !important;
+		margin-bottom: 12px !important;
+		margin-left: 24px !important;
+	}
+	#onetrust-banner-sdk[dir="rtl"] #onetrust-policy {
+		margin-left: 0 !important;
+		margin-right: 24px !important;
+	}
+	#onetrust-consent-sdk #onetrust-group-container {
+		display: block !important;
+	}
+	#onetrust-consent-sdk #onetrust-group-container *, #onetrust-consent-sdk #onetrust-button-group-parent * {
+		font-size: 14px !important;
+	}
+	#onetrust-consent-sdk #onetrust-button-group-parent {
+		margin: 0 24px !important;
+		width: calc(100% - 48px) !important;
+	}
+	#onetrust-consent-sdk #onetrust-button-group-parent button {
+		font-size: 13px !important;
+		border-radius: 8px !important;
+		padding: 12px 14px !important;
+		float: left !important;
+		min-width: 0 !important;
+	}
+	#onetrust-banner-sdk[dir="rtl"] #onetrust-button-group-parent button {
+		float: right !important;
+	}
+	#onetrust-consent-sdk button#onetrust-pc-btn-handler {
+		padding: 2px 0 !important;
+		min-width: 0 !important;
+	}
+	#onetrust-banner-sdk #onetrust-button-group {
+		margin-right: 0 !important;
+		display: block;
+		width: 100%;
+		padding-bottom: .66em;
+	}
+}
+@media only screen and (min-width: 504px) {
+	#onetrust-banner-sdk #onetrust-policy {
+		margin-bottom: 6px !important;
+	}
+	#onetrust-consent-sdk button#onetrust-pc-btn-handler {
+		padding: 13px 0 !important;
+	}
+}
+@media only screen and (min-width: 897px) {
+	#onetrust-banner-sdk #onetrust-policy {
+		margin-top: 2em !important;
+		margin-bottom: 2em !important;
+	}
+	#onetrust-banner-sdk #onetrust-policy-text {
+		margin: 0 !important;
+	}
+	#onetrust-banner-sdk #onetrust-button-group {
+		float: right !important;
+		margin-right: 2em !important;
+	}
+	#onetrust-banner-sdk[dir="rtl"] #onetrust-button-group {
+		float: left !important;
+		margin-right: 0 !important;
+		margin-left: 2em !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-eight.ot-sdk-columns {
+		width: 47% !important;
+		position: relative !important;
+		float: left !important;
+	}
+	#onetrust-banner-sdk[dir="rtl"] .ot-sdk-eight.ot-sdk-columns {
+		float: right !important;
+		right: 0 !important;
+	}
+	#onetrust-banner-sdk #onetrust-policy #onetrust-policy-text {
+		width: 99% !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-three.ot-sdk-columns  {
+		width: 53% !important;
+		float: right !important;
+		padding: 0 !important;
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		transform: none !important;
+		margin-left: 0 !important;
+		margin-top: 2.10em !important;
+		right: auto !important;
+	}
+	#onetrust-banner-sdk[dir="rtl"] .ot-sdk-three.ot-sdk-columns {
+		margin-right: 0 !important;
+	}
+	#onetrust-consent-sdk #onetrust-button-group-parent button {
+		float: left !important;
+		margin-top: 0 !important;
+	}
+	#onetrust-banner-sdk[dir="rtl"] #onetrust-button-group-parent button {
+		float: right !important;
+	}
+	#onetrust-consent-sdk button#onetrust-pc-btn-handler {
+		padding: 14px 0 !important;
+	}
+	#onetrust-consent-sdk #onetrust-button-group-parent button:last-child {
+		margin-right: 0 !important;
+	}
+	#onetrust-banner-sdk[dir="rtl"] #onetrust-button-group-parent button:last-child {
+		margin-left: 0 !important;
+	}
+}
+@media only screen and (min-width: 1025px) {
+	#onetrust-consent-sdk #onetrust-button-group-parent button {
+		margin-top: 0em !important;
+		font-size: 14px !important;
+	}
+	#onetrust-consent-sdk #onetrust-group-container *, #onetrust-consent-sdk #onetrust-button-group-parent * {
+		font-size: 14px !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-three.ot-sdk-columns {
+		margin-top: 1.8em !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-eight.ot-sdk-columns {
+		width: 45% !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-three.ot-sdk-columns {
+		width: 55% !important;
+	}
+}
+@media only screen and (min-width: 1280px) {
+	#onetrust-banner-sdk {
+		top: 0 !important;
+		display: flex;
+		justify-content: center !important;
+		align-items: center !important;
+		background-color: transparent !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-container {
+		width: 60% !important;
+		background: linear-gradient(15deg, black, #101010) !important;
+		border-radius: 1rem !important;
+		border: 1px solid #2f2f2f !important;
+		padding: 2rem 3rem !important;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-row {
+		max-width: 1168px !important;
+		margin: 0 auto !important;
+		position: relative !important;
+		display: flex !important;
+		flex-direction: column !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-eight.ot-sdk-columns {
+		width: 45% !important;
+	}
+	#onetrust-banner-sdk .ot-sdk-three.ot-sdk-columns {
+		width: 55% !important;
+	}
+	#onetrust-banner-sdk #onetrust-policy {
+		margin: 20px 0 20px 0 !important;
+	}
+	#onetrust-banner-sdk #onetrust-policy-text {
+		text-align: center !important;
+	}
+	#onetrust-consent-sdk #onetrust-button-group {
+		margin-right: 0 !important;
+	}
+	#onetrust-consent-sdk #onetrust-button-group-parent {
+		text-align: right !important;
+		margin: 26px 0 0 0 !important;
+		width: auto !important;
+		display: flex !important;
+		justify-content: center !important;
+	}
+	#onetrust-consent-sdk #onetrust-button-group-parent button {
+		margin-top: 0.25em !important;
+		font-size: 14px !important;
+	}
+	#onetrust-consent-sdk #onetrust-group-container {
+		width: auto !important;
+	}
+	#onetrust-consent-sdk #onetrust-group-container *, #onetrust-consent-sdk #onetrust-button-group-parent * {
+		font-size: 14px !important;
+	}
+}
+
+/*
+ * OVERLAY
+ */
+
+/*
+	If Preference Center opened twice, hide second
+	#onetrust-pc-sdk:nth-child(2) {
+		display: none !important;
+	}
+*/
+#onetrust-pc-sdk #ot-pc-content {
+	bottom: 92px !important;
+	top: 80px !important;
+}
+#onetrust-pc-sdk .ot-pc-header {
+	border-bottom: 0 !important;
+	padding-top: 24px !important;
+	padding-bottom: 24px !important;
+}
+#onetrust-pc-sdk #close-pc-btn-handler.ot-close-icon {
+	right: 10px !important;
+}
+#onetrust-pc-sdk #filter-btn-handler {
+	background-color: #2d85f3 !important;
+}
+#onetrust-pc-sdk[dir="rtl"] #close-pc-btn-handler.ot-close-icon {
+	right: auto !important;
+	left: 10px !important;
+}
+#onetrust-consent-sdk #onetrust-pc-sdk *:focus {
+	outline: none !important;
+}
+#onetrust-consent-sdk #ot-pc-title {
+	font-family: SupercellHeadline-Heavy, arial, sans-serif !important;
+	margin-bottom: 2px !important;
+	color: #000 !important;
+	font-size: 24px !important;
+	line-height: 1.3 !important;
+	-webkit-text-stroke: unset !important;
+}
+#onetrust-pc-sdk .ot-pc-logo {
+	width: 50px !important;
+	height: 42px !important;
+}
+#onetrust-pc-sdk #ot-pc-desc {
+	display: none !important;
+}
+#onetrust-pc-sdk #ot-pc-lst {
+	top: 80px !important;
+}
+#onetrust-pc-sdk .ot-btn-container button {
+	font-family: SupercellText-Medium, arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #fff !important;
+	border-radius: 8px !important;
+	padding: 12px 16px !important;
+	letter-spacing: 0px !important;
+	border: 0 !important;
+	opacity: 1 !important;
+	outline: none !important;
+	line-height: 1.2 !important;
+	transition: background-color 0.15s cubic-bezier(0.645,0.045,0.355,1);
+}
+#onetrust-pc-sdk #accept-recommended-btn-handler {
+	display: none !important;
+}
+#onetrust-pc-sdk .ot-btn-container button:hover {
+	border: 0px !important;
+	color: #fff !important;
+	background-color: #2979de !important;
+}
+#onetrust-pc-sdk #ot-category-title {
+	display: none !important;
+}
+#onetrust-pc-sdk .ot-cat-header {
+	font-size: 18px !important;
+	line-height: 1.25 !important;
+	font-family: SupercellText-Medium, arial, sans-serif !important;
+	color: #000 !important;
+}
+#onetrust-pc-sdk .ot-cat-item {
+	margin-top: 16px !important;
+}
+#onetrust-pc-sdk .ot-tgl * {
+	outline: none !important;
+}
+#onetrust-pc-sdk .ot-vs-list .ot-always-active, #onetrust-pc-sdk .ot-cat-grp .ot-always-active {
+	color: #2d85f3 !important;
+	line-height: 2 !important;
+}
+#onetrust-pc-sdk .ot-pc-refuse-all-handler {
+	display: none !important;
+}
+
+/*
+ * OVERLAY @media
+ */
+
+@media only screen and (max-width: 600px) {
+	#onetrust-pc-sdk .ot-pc-header {
+		padding-left: 18px !important;
+		padding-top: 18px !important;
+	}
+	#onetrust-pc-sdk[dir="rtl"] .ot-pc-header {
+		padding-left: 0 !important;
+		padding-right: 18px !important;
+	}
+	#onetrust-pc-sdk #close-pc-btn-handler.ot-close-icon {
+		right: 0px !important;
+		top: 0 !important;
+	}
+	#onetrust-pc-sdk[dir="rtl"] #close-pc-btn-handler.ot-close-icon {
+		right: auto !important;
+		left: 0 !important;
+	}
+	#onetrust-consent-sdk #ot-pc-title {
+		margin-bottom: 4px !important;
+		margin-top: 16px !important;
+	}
+	#onetrust-pc-sdk .ot-cat-item {
+		margin-top: 10px !important;
+	}
+	#onetrust-pc-sdk .ot-btn-container button {
+		margin-bottom: 24px !important;
+	}
+	.ot-sdk-row.ot-cat-grp {
+		/*
+		 * FORCE SCROLLING FOR MOBILE
+		 */
+		min-height: calc(100vh - 270px) !important;
+	}
+	#onetrust-pc-sdk #ot-pc-content {
+		width: calc(100% - 36px) !important;
+		margin-left: 18px !important;
+	}
+	#onetrust-pc-sdk[dir="rtl"] #ot-pc-content {
+		margin-left: 3px !important;
+		margin-right: 18px !important;
+	}
+	#onetrust-pc-sdk .ot-pc-footer .ot-btn-container {
+		padding: 10px 14px 10px 8px !important;
+	}
+	#onetrust-pc-sdk[dir="rtl"] .ot-pc-footer .ot-btn-container {
+		padding: 10px 8px 10px 16px !important;
+	}
+	#onetrust-pc-sdk.ot-ftr-stacked .ot-btn-container {
+		width: auto !important;
+	}
+}
+
+/*
+ * NEW CHECKBOXES
+ */
+
+#onetrust-pc-sdk .ot-chkbox input:checked~label::before {
+	background-color: #2d85f3 !important;
+}
+#onetrust-pc-sdk .ot-chkbox label::before {
+	border: 1px solid #2d85f3 !important;
+}
+
+#onetrust-pc-sdk .ot-checkbox input[type="checkbox"]:focus + label::before, #onetrust-pc-sdk .ot-chkbox input[type="checkbox"]:focus + label::before {
+	outline-color: #2d85f3 !important;
+	outline-width: 0 !important;
+}
+
+/*
+ * .with-xsolla
+ */
+
+#onetrust-banner-sdk #onetrust-policy-text .with-xsolla .hr {
+	display: block !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 1.25em;
+}
+
+#onetrust-banner-sdk #onetrust-policy-text .with-xsolla a {
+	margin-left: 0px !important;
+	color: #fff !important;
+	font-family: SupercellText-Regular, arial, sans-serif !important;
+	font-weight: normal !important;
+	border-bottom: 1px solid #555 !important;
+}
+
+@media only screen and (max-width: 425px) {
+	#onetrust-consent-sdk #onetrust-group-container .with-xsolla {
+		display: block;
+		padding-bottom: .5em;
+	}
+	#onetrust-consent-sdk #onetrust-group-container .with-xsolla a {
+		display: inline !important;
+		margin-left: 0px !important;
+	}
+}
